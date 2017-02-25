@@ -84,27 +84,3 @@ var getResponseFromAIChatBot = function (msg_from_user)
 
     return response_from_agent_bot;
 }
-
-function FindalltheWords(sentence) {
-    diffWords = [];
-    words = sentence
-                  .replace(/[.,?!;()"'-]/g, " ")
-                  .replace(/\s+/g, " ")
-                  .toLowerCase()
-                  .split(" ");
-    words.forEach(function (word) {
-        if (!(diffWords.hasOwnProperty(word))) {
-            diffWords.push(word);
-        }
-    });
-
-    var array = [];
-    array = ['from', 'how', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
-
-    array.forEach(function (word) {
-        if ((diffWords.hasOwnProperty(word))) {
-            diffWords.pop(word);
-        }
-    });
-    return diffWords;
-}
