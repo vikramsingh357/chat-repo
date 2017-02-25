@@ -78,9 +78,9 @@ listener.sockets.on('connection', function (socket) {
 
 var getResponseFromAIChatBot = function (msg_from_user)
 {
-	var response_from_agent_bot = FindalltheWords(msg_from_user)
+	//var response_from_agent_bot = FindalltheWords(msg_from_user);
     // TODO: Bring this response from AI Chatbot API Interface
-   // var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
+   var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
 
     return response_from_agent_bot;
 }
