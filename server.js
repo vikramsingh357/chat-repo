@@ -86,24 +86,23 @@ var getResponseFromAIChatBot = function (msg_from_user)
 }
 
 function FindalltheWords(sentence) {
-    diffWords = [];
-    words = sentence
-                  .replace(/[.,?!;()"'-]/g, " ")
-                  .replace(/\s+/g, " ")
-                  .toLowerCase()
-                  .split(" ");
+    var diffWords = [];
+    var words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
     words.forEach(function (word) {
-        if (!(diffWords.hasOwnProperty(word))) {
+       if (!(diffWords.indexOf(word) > -1)) {
             diffWords.push(word);
         }
     });
 
     var array = [];
-    array = ['from', 'how', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
+    var index;
+    array = ['from', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
 
     array.forEach(function (word) {
-        if ((diffWords.hasOwnProperty(word))) {
-            diffWords.pop(word);
+    index=diffWords.indexOf(word);
+        if (index > -1) {
+
+            diffWords.splice(index, 1);
         }
     });
     return diffWords;
