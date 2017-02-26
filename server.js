@@ -88,24 +88,26 @@ var getResponseFromAIChatBot = function (msg_from_user)
 
 var findalltheWords = function (sentence) {
 
- var diffWords = [];
-    var words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
-    words.forEach(function (word) {
-        if (!(diffWords.indexOf(word) > -1)) {
-            diffWords.push(word);
-        }
-    });
+ //var diffWords = [];
+   // var words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
+   // words.forEach(function (word) {
+       // if (!(diffWords.indexOf(word) > -1)) {
+       //     diffWords.push(word);
+       // }
+   // });
 
-    var array = [];
-    var index;
-    array = ['from', 'how', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
+   // var array = [];
+   // var index;
+   // array = ['from', 'how', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
 
-    array.forEach(function (word) {
-index=diffWords.indexOf(word);
-        if (index > -1) {
+   // array.forEach(function (word) {
+//index=diffWords.indexOf(word);
+     //   if (index > -1) {
 
-            diffWords.splice(index, 1);
-        }
-    });
-    return diffWords;
+        //    diffWords.splice(index, 1);
+     //   }
+  //  });
+   // return diffWords;
+	var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
+	return response_from_agent_bot;
 }
