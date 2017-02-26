@@ -68,7 +68,7 @@ listener.sockets.on('connection', function (socket) {
 
     socket.on('chat message', function (msg_from_user) {
 
-        var response_from_narad_muni = getResponseFromAIChatBot();
+        var response_from_narad_muni = getResponseFromAIChatBot(msg_from_user);
         socket.emit('chat message', response_from_narad_muni);
     });
 
