@@ -79,11 +79,11 @@ listener.sockets.on('connection', function (socket) {
 var getResponseFromAIChatBot = function (msg_from_user)
 {
 	console.log("hello this is check"+msg_from_user);
-	var response_from_agent_bot = FindalltheWords(msg_from_user);
-	console.log("third check"+response_from_agent_bot);
+	//var response_from_agent_bot = FindalltheWords(msg_from_user);
+	
     // TODO: Bring this response from AI Chatbot API Interface
-   //var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
-
+   var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
+console.log("third check"+response_from_agent_bot);
     return response_from_agent_bot;
 }
 
