@@ -78,7 +78,7 @@ listener.sockets.on('connection', function (socket) {
 
 var getResponseFromAIChatBot = function (msg_from_user)
 {
-	console.log("hello this is check"+msg_from_user);
+	alert("hello this is check"+msg_from_user);
 	//var response_from_agent_bot = FindalltheWords(msg_from_user);
 	
     // TODO: Bring this response from AI Chatbot API Interface
