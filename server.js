@@ -86,20 +86,20 @@ var getResponseFromAIChatBot = function (msg_from_user)
 }
 
 function FindalltheWords(sentence) {
-    var diffWords = [];
+ var diffWords = [];
     var words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
     words.forEach(function (word) {
-       if (!(diffWords.indexOf(word) > -1)) {
+        if (!(diffWords.indexOf(word) > -1)) {
             diffWords.push(word);
         }
     });
 
     var array = [];
     var index;
-    array = ['from', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
+    array = ['from', 'how', 'to', 'want', 'the', 'for', 'in', 'need', 'only'];
 
     array.forEach(function (word) {
-    index=diffWords.indexOf(word);
+index=diffWords.indexOf(word);
         if (index > -1) {
 
             diffWords.splice(index, 1);
