@@ -78,17 +78,16 @@ listener.sockets.on('connection', function (socket) {
 
 var getResponseFromAIChatBot = function (msg_from_user)
 {
-	alert("hello this is check"+msg_from_user);
-	//var response_from_agent_bot = FindalltheWords(msg_from_user);
+	var response_from_agent_bot = findalltheWords(msg_from_user);
 	
     // TODO: Bring this response from AI Chatbot API Interface
-   var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
-console.log("third check"+response_from_agent_bot);
+   //var response_from_agent_bot = "Narayan! Narayan! Bolo Watse, kis duwidha mein ho?";
+
     return response_from_agent_bot;
 }
 
-function FindalltheWords(sentence) {
-	console.log("second check"+sentence);
+var findalltheWords = function (sentence) {
+
  var diffWords = [];
     var words = sentence.replace(/[.,?!;()"'-]/g, " ").replace(/\s+/g, " ").toLowerCase().split(" ");
     words.forEach(function (word) {
